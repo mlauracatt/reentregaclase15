@@ -1,0 +1,24 @@
+@import "grids";
+@import "reset";
+@import "variables";
+@import "nav";
+@import "indexcard";
+@import "footer";
+@import "nosotros";
+@import "mixin";
+@import "btn";
+
+
+.tarjeta{
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    @include propiedades(500px,auto,#000);
+    .text-card{
+        margin-left: 10px;
+    }
+    button{
+        @extend .btn;
+        background-color: rgb(13, 138, 54)
+    }
+}

@@ -1,0 +1,13 @@
+.btn{
+    padding: map-get($btn , padding );
+    border: map-get($btn , border );
+    border-radius: map-get($btn , border-radius );
+    @include propiedades(200px,auto,rgb(14, 13, 13) )
+}
+
+@each $clave , $var in $colores {
+    .btn-#{$clave}{
+        @extend .btn;
+        background-color: $var;
+    }
+}

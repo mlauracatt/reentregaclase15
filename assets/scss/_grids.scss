@@ -1,0 +1,24 @@
+.rowstyle{
+    display: flex;
+    flex-wrap: wrap;
+}
+@for $var from 1 through 10 {
+    .column-#{$var}{
+        width: 10% * $var;
+    }  
+}
+
+@media(min-width:768px){
+    @for $var from 1 through 10 {
+        .column-md-#{$var}{
+            width: 10% * $var;
+        }
+        
+    }
+}
+
+@each $clave , $var in $justify {
+    .justify-content-#{$clave}{
+        justify-content: $var;
+    }
+}
